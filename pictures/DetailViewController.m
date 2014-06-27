@@ -8,11 +8,13 @@
 
 #import "DetailViewController.h"
 
+
 @interface DetailViewController ()
 - (void)configureView;
 @end
 
 @implementation DetailViewController
+
 
 #pragma mark - Managing the detail item
 
@@ -42,6 +44,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
+#import "DetailViewController.h"
+#import "ViewController.h"
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
@@ -18,4 +20,9 @@
 -(void)insertNewObject:(NSString *)filename;
 -(NSString *)getpath:(NSString *)filename;
 -(NSData *)getimagebinary:(NSString *)filename;
+@property(retain) NSArray *onlyjpgs;
+@property(nonatomic,strong) NSArray *dircontents;
+@property (nonatomic,strong)DetailViewController *dobj;
+
+
 @end

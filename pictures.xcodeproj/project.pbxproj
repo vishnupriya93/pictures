@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C11498A1954121900FA855C /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1149891954121900FA855C /* Image.m */; };
-		2C11498C1954389700FA855C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11498B1954389700FA855C /* Main.storyboard */; };
 		2C8561F91952C2BA002313CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8561F81952C2BA002313CA /* Foundation.framework */; };
 		2C8561FB1952C2BA002313CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8561FA1952C2BA002313CA /* CoreGraphics.framework */; };
 		2C8561FD1952C2BA002313CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8561FC1952C2BA002313CA /* UIKit.framework */; };
@@ -41,6 +40,8 @@
 		2C8562531952C3FB002313CA /* bear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C8562521952C3FB002313CA /* bear.jpg */; };
 		2C8562551952C405002313CA /* lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C8562541952C405002313CA /* lion.jpg */; };
 		2C8562571952C4F6002313CA /* tiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C8562561952C4F6002313CA /* tiger.jpg */; };
+		2CACAB9A195BFDEC00AA42A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAB99195BFDEC00AA42A6 /* ViewController.m */; };
+		2CACAB9E195C32AE00AA42A6 /* Main 16-14-59-995.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACAB9D195C32AE00AA42A6 /* Main 16-14-59-995.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,6 @@
 /* Begin PBXFileReference section */
 		2C1149881954121900FA855C /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		2C1149891954121900FA855C /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
-		2C11498B1954389700FA855C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C8561F51952C2BA002313CA /* pictures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pictures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8561F81952C2BA002313CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C8561FA1952C2BA002313CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +94,9 @@
 		2C8562521952C3FB002313CA /* bear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bear.jpg; sourceTree = "<group>"; };
 		2C8562541952C405002313CA /* lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpg; sourceTree = "<group>"; };
 		2C8562561952C4F6002313CA /* tiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpg; sourceTree = "<group>"; };
+		2CACAB98195BFDEC00AA42A6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CACAB99195BFDEC00AA42A6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CACAB9D195C32AE00AA42A6 /* Main 16-14-59-995.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main 16-14-59-995.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,12 +183,14 @@
 			children = (
 				2C11498D195438EC00FA855C /* iPad */,
 				2C8562091952C2BA002313CA /* AppDelegate.h */,
+				2CACAB9D195C32AE00AA42A6 /* Main 16-14-59-995.storyboard */,
 				2C85620A1952C2BA002313CA /* AppDelegate.m */,
-				2C11498B1954389700FA855C /* Main.storyboard */,
 				2C8562121952C2BA002313CA /* MasterViewController.h */,
 				2C8562131952C2BA002313CA /* MasterViewController.m */,
 				2C8562151952C2BA002313CA /* DetailViewController.h */,
 				2C8562161952C2BA002313CA /* DetailViewController.m */,
+				2CACAB98195BFDEC00AA42A6 /* ViewController.h */,
+				2CACAB99195BFDEC00AA42A6 /* ViewController.m */,
 				2C8562181952C2BA002313CA /* Images.xcassets */,
 				2C85620F1952C2BA002313CA /* pictures.xcdatamodeld */,
 				2C1149881954121900FA855C /* Image.h */,
@@ -316,7 +321,7 @@
 				2C8562431952C37D002313CA /* bear2.jpg in Resources */,
 				2C85624D1952C37D002313CA /* tiger4.jpg in Resources */,
 				2C85624B1952C37D002313CA /* tiger2.jpg in Resources */,
-				2C11498C1954389700FA855C /* Main.storyboard in Resources */,
+				2CACAB9E195C32AE00AA42A6 /* Main 16-14-59-995.storyboard in Resources */,
 				2C8562571952C4F6002313CA /* tiger.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CACAB9A195BFDEC00AA42A6 /* ViewController.m in Sources */,
 				2C8562171952C2BA002313CA /* DetailViewController.m in Sources */,
 				2C8562141952C2BA002313CA /* MasterViewController.m in Sources */,
 				2C8562111952C2BA002313CA /* pictures.xcdatamodeld in Sources */,

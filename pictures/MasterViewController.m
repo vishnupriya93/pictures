@@ -12,14 +12,17 @@
 #import "AppDelegate.h"
 
 @interface MasterViewController ()
-{
-    NSArray *onlyjpgs;
-    NSArray *dircontents;
-}
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
+ViewController *vobj;
 @implementation MasterViewController
+
+@synthesize onlyjpgs,dircontents;
+
+
+
 
 - (void)awakeFromNib
 {
@@ -28,7 +31,12 @@
 
 - (void)viewDidLoad
 {
+   
     [super viewDidLoad];
+    
+    _dobj=[[DetailViewController alloc]init];
+    vobj=[[ViewController alloc]init];
+    onlyjpgs=[[NSArray alloc]init];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     NSString *root = [[NSBundle mainBundle] bundlePath];
@@ -40,19 +48,19 @@
     
     NSEntityDescription *entityDescription=[NSEntityDescription entityForName:@"Image" inManagedObjectContext:_managedObjectContext];
     [fetchRequest setEntity:entityDescription];
+    
     NSError *error1=nil;
-    onlyjpgs =[_appdelegateobj.managedObjectContext executeFetchRequest:fetchRequest error:&error1];
+   onlyjpgs =[_appdelegateobj.managedObjectContext executeFetchRequest:fetchRequest error:&error1];
     for (int i=0; i < [onlyjpgs count]; i++) {
         if ([onlyjpgs containsObject:[[dircontents objectAtIndex:i] name] ] ) {
             NSLog(@"%@ is already added");
         }
         else{
-
     for(NSString* fname in onlyjpgs)
     {
                [self insertNewObject:fname];
-    }
-        }
+    }        }
+  
     }
 }
 
@@ -268,6 +276,8 @@
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"name"] description];
+   
+    
 }
 
 -(NSString *)getpath:(NSString *)filename
@@ -277,7 +287,9 @@
     [imageurl absoluteURL];
     NSString *path= [imageurl absoluteString];
     NSLog(@"%@",path);
+    
     return path;
+  
 }
 
 -(NSData *)getimagebinary:(NSString *)filename
@@ -289,6 +301,10 @@
     NSData *imgdata = UIImageJPEGRepresentation(img, 1.0);
     return imgdata;
 }
+
+
+
+
 
 
 @end
